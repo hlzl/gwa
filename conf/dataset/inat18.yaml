@@ -1,0 +1,12 @@
+name: i_naturalist2018
+num_classes: 8142
+image_size: 224
+jpeg_dir:
+  train: "/path/to/iNat18/train"
+  val_size: 0.1
+  test: "/path/to/iNat18/val"
+
+rand_aug: 2
+mixup: 0.1
+
+# NOTE: look into prepare/inat.py for preprocessing

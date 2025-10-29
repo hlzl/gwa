@@ -1,0 +1,27 @@
+name: cifar10 
+num_classes: 10
+image_size: 32
+train_size: null
+numpy_path:
+  train_data: "/path/to/CIFAR-10/cifar10_train_data_90pct.npy"
+  train_label: "/path/to/CIFAR-10/cifar10_train_labels_90pct.npy"
+  val_data: "/path/to/CIFAR-10/cifar10_val_data_10pct.npy"
+  val_label: "/path/to/CIFAR-10/cifar10_val_labels_10pct.npy"
+  test_data: "/path/to/CIFAR-10/cifar10_test_data.npy"
+  test_label: "/path/to/CIFAR-10/cifar10_test_labels.npy"
+
+rand_aug: 1
+mixup: null
+
+# Get test set v2 and noisy labels by git cloning the following repos:
+# https://github.com/modestyachts/CIFAR-10.1
+# https://github.com/UCSC-REAL/cifar-10-100n
+
+# And alternative testset with wget from here:
+# https://github.com/cvjena/cifair/releases/download/v1.0/ciFAIR-10.zip
+# https://github.com/cvjena/cifair/releases/download/v1.0/ciFAIR-100.zip
+
+# CIFAR-10-C, -100-C and -10-P:
+# https://zenodo.org/records/2535967/files/CIFAR-10-C.tar?download=1
+# https://zenodo.org/records/3555552/files/CIFAR-100-C.tar?download=1
+# https://drive.google.com/drive/folders/1dY1_zeRyjMKdfmMbQ_uK8O1i0MVI9UbZ?usp=sharing

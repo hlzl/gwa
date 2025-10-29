@@ -1,0 +1,14 @@
+# Taken from https://github.com/kentaroy47/vision-transformers-cifar10/tree/main
+model:
+  _target_: networks.ViT
+  num_classes: ${dataset.num_classes}
+  patch_size: [4, 4]
+  width: 512
+  depth: 6
+  mlp_dim: 512
+  num_heads: 8
+  posemb: "sincos2d"
+  pool_type: "gap"
+
+loss_fn:
+  _target_: training.functions.cross_entropy_loss

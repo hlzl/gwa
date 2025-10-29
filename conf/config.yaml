@@ -1,0 +1,13 @@
+defaults:
+  - arch: convnext_pico
+  - dataset: cifar10
+  - optim: adam
+  - _self_
+
+seed: 0
+mixed_precision: False
+
+loading:
+  dir: null # parent directory with hparams.json, logs and ckpts
+  epoch: null
+  resume_training: False

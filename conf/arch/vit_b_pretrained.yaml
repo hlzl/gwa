@@ -1,0 +1,16 @@
+model:
+  _target_: networks.VisionTransformer
+  name: "ViT/B_16"
+  mlp_dim: 3072
+  num_layers: 12
+  num_heads: 12
+  num_classes: ${dataset.num_classes}
+  patch_size: 16
+  hidden_size: 768
+  attention_dropout_rate: 0.0
+  dropout_rate: 0.0
+  representation_size: null
+  classifier: "token"
+
+loss_fn:
+  _target_: training.functions.cross_entropy_loss

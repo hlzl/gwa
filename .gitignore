@@ -1,0 +1,10 @@
+**/__pycache__/*
+**/data/*
+**/outputs/*
+.venv/*
+.vscode/*
+ckpts/*
+imgs/*
+logs/*
+tmp/*
+wandb/*

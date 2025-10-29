@@ -1,0 +1,17 @@
+fn:
+  _target_: optax.sgd
+  momentum: null
+
+lr: 0.001
+batch: 256
+n_iterations: 20_000
+acc_steps: 1
+shuffle_buffer: 50_000
+
+# Updates after each epoch 
+scheduler:
+  _target_: piecewise_schedule
+  init_value: 0.0
+  end_value: 0.0
+  increase_steps: 500
+  decrease_steps: 4500

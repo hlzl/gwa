@@ -1,0 +1,7 @@
+model:
+  _target_: networks.ConvNeXtV2
+  name: "ConvNeXt_Femto"
+  depths: [2, 2, 6, 2]
+  dims: [48, 96, 192, 384]
+  downsample: 1   # 1 for images <= 32px
+  num_classes: ${dataset.num_classes}

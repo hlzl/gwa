@@ -1,0 +1,10 @@
+name: places365
+num_classes: 365
+image_size: 224
+jpeg_dir:
+  train: "/path/to/Places365/train"
+  val_size: 0.01
+  test: "/path/to/Places365/val"
+
+rand_aug: 2
+mixup: 0.1

@@ -1,0 +1,63 @@
+# ConvNeXt - CIFAR-10
+model: ConvNeXt Pico
+optim: adam
+  lr: 0.001
+  batch: 512
+  n_iterations: 9000
+  image_size: 32
+  rand_aug: 1
+  mixup: 0
+  scheduler: cosine_decay_schedule
+
+# ViT - CIFAR-10
+model: ViT/CIFAR-4
+optim: adam
+  lr: 0.0001
+  batch: 256
+  n_iterations: 35000
+  image_size: 32
+  rand_aug: 1
+  mixup: 0
+  scheduler: cosine_decay_schedule
+
+# ConvNeXt - ImageNet-1k
+model: ConvNeXt Femto
+optim: adamw
+  lr: 0.001
+  weight_decay: 0.0001
+  batch: 1024
+  n_iterations: 112_650
+  image_size: 224
+  rand_aug: 10
+  mixup: 0.2
+  grad_clip_norm: 1.0
+  scheduler: warmup_cosine_decay_schedule
+    warmup_steps: 10_000
+
+# ViT - ImageNet-1k
+model: ViT/S-16
+optim: adamw
+  lr: 0.001
+  weight_decay: 0.0001
+  batch: 1024
+  n_iterations: 112_650
+  image_size: 224
+  rand_aug: 10
+  mixup: 0.2
+  grad_clip_norm: 1.0
+  scheduler: warmup_cosine_decay_schedule
+    warmup_steps: 10_000
+
+# ViT - ImageNet-22k
+model: ViT/B-16
+optim: sgd
+  momentum: 0.9
+  lr: 0.01
+  batch: 512
+  n_iterations: 26_000
+  image_size: 224
+  rand_aug: 0
+  mixup: 0
+  grad_clip_norm: 1.0
+  scheduler: warmup_cosine_decay_schedule
+    warmup_steps: 500

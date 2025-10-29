@@ -1,0 +1,12 @@
+fn:
+  _target_: optax.adam
+
+lr: 0.001
+batch: 512
+acc_steps: 1
+n_iterations: 9000
+shuffle_buffer: 50_000
+
+scheduler:
+  _target_: optax.cosine_decay_schedule
+  init_value: ${optim.lr}

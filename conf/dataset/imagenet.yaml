@@ -1,0 +1,11 @@
+name: imagenet
+num_classes: 1000
+image_size: 224
+jpeg_dir:
+  train: "/path/to/ILSVRC2012/train"
+  val_size: 0.01
+  test: "/path/to/ILSVRC2012/val"
+
+# ViT/S ImageNet from scratch
+rand_aug: 10
+mixup: 0.2

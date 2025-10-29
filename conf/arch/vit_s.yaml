@@ -1,0 +1,9 @@
+model:
+  _target_: networks.ViT
+  variant: "S/16"
+  num_classes: ${dataset.num_classes}
+  posemb: "sincos2d"
+  pool_type: "gap"
+
+loss_fn:
+  _target_: training.functions.cross_entropy_loss

@@ -1,0 +1,15 @@
+fn:
+  _target_: optax.adamw
+  b1: 0.9
+  b2: 0.999
+  weight_decay: 0.05
+
+lr: 1e-3
+batch: 1024
+n_iterations: 35_000
+acc_steps: 1
+shuffle_buffer: 50_000
+
+scheduler:
+  _target_: optax.cosine_decay_schedule
+  init_value: ${optim.lr}
