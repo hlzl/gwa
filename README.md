@@ -3,6 +3,7 @@
   <a href="https://arxiv.org/abs/2510.25480" target="_blank"><img src="https://img.shields.io/badge/arXiv-2510.25480-brightgreen"></a>
   <a href="https://huggingface.co/papers/2510.25480" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Daily Papers-blue"></a>
 </p>
+
 This repository contains code for the NeurIPS '25 paper [Gradient-Weight Alignment as a Train-Time Proxy for Generalization in Classification Tasks](https://neurips.cc/virtual/2025/poster/117752).
 
 ![visualization](figure.jpg)
