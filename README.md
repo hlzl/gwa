@@ -1,15 +1,18 @@
 <h1 align='center'>gradient-weight alignment</h1>
-
-This repository contains the implementation for the NeurIPS '25 paper [Gradient-Weight Alignment as a Train-Time Proxy for Generalization in Classification Tasks](https://neurips.cc/virtual/2025/poster/117752).
+<p align="center">
+  <a href="https://arxiv.org/abs/2510.25480" target="_blank"><img src="https://img.shields.io/badge/arXiv-2510.25480-brightgreen"></a>
+  <a href="https://huggingface.co/papers/2510.25480" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Daily Papers-blue"></a>
+</p>
+This repository contains code for the NeurIPS '25 paper [Gradient-Weight Alignment as a Train-Time Proxy for Generalization in Classification Tasks](https://neurips.cc/virtual/2025/poster/117752).
 
 ![visualization](figure.jpg)
 
-## Reproduction
+## ⛳️ Reproduction
 You can use [uv](https://docs.astral.sh/uv/) to quickly train a model and see how GWA is computed.
 All experiments in the paper where run with JAX.
 In order to run experiments you will need to preprocess the corresponding dataset as indicated in `src/datasets/prepare`.
 
-## Implementation
+## 🛠️ Implementation
 The per-sample alignment scores can easily be computed with minor modifications to your training.
 For JAX, all required adapations can be found in the `functions.py` and `alignment.py` files inside `src/training`.
 A quick PyTorch example can be found in `gwa_torch.py`.
@@ -25,7 +28,7 @@ The classifier weights can be directly taken from the params of the model's curr
 
 GWA, as a scalar early stopping criterion, can be easily computed after each epoch by storing the per-sample alignment scores after each update step (see line 113 and 118 in `src/train.py`).
 
-## Citation
+## 📄 Citation
 Feel free to use the following citation if you found our paper, metric or code useful:
 ```bibtex
 @inproceedings{hoelzl2025gwa,
